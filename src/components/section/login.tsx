@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import LoginForm from './login-form';
@@ -27,15 +26,19 @@ const Login = () => {
 
             {/* Top brand */}
             <div className="pointer-events-none absolute left-0 right-0 top-0 flex items-center justify-between px-6 py-5 sm:px-8">
-              <Link
-                href="/"
+              <motion.a
+                href="https://scanerio.codexlab.in/"
                 className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur-md hover:bg-white/15"
+                animate={{ y: [0, -2, 0] }}
+                transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <span className="h-6 w-6 rounded-full bg-emerald-400/90 text-[11px] font-extrabold text-slate-900 flex items-center justify-center">
                   S
                 </span>
                 <span className="text-sm tracking-tight">Scanerio</span>
-              </Link>
+              </motion.a>
               <span className="hidden text-[11px] font-medium text-slate-200/90 sm:inline-flex">
                 Web Audit · Performance · Accessibility
               </span>
