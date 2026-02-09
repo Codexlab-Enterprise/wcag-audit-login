@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import LoginForm from './login-form';
+import React from "react";
+import { motion } from "framer-motion";
+import LoginForm from "./login-form";
 
 const Login = () => {
   return (
@@ -27,10 +27,14 @@ const Login = () => {
             {/* Top brand */}
             <div className="pointer-events-none absolute left-0 right-0 top-0 flex items-center justify-between px-6 py-5 sm:px-8">
               <motion.a
-                href="https://scanerio.codexlab.in/"
+                href="https://scanerio.com/"
                 className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur-md hover:bg-white/15"
                 animate={{ y: [0, -2, 0] }}
-                transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 2.6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -74,7 +78,6 @@ const Login = () => {
         {/* RIGHT: Login Card */}
         <div className="flex w-full items-center justify-center px-4 py-6 sm:px-6 lg:w-1/2 lg:px-8 lg:py-8">
           <div className="w-full max-w-md">
-
             <LoginForm />
           </div>
         </div>
