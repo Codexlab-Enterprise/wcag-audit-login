@@ -20,7 +20,7 @@ function isPublic(req: NextRequest) {
   );
 }
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const url = req.nextUrl;
   const session = req.cookies.get("refreshToken")?.value ?? null;
 
@@ -51,5 +51,5 @@ export function middleware(req: NextRequest) {
 
 // Only run middleware on your protected areas to keep things simple/fast
 export const config = {
-  matcher: ['/((?!api|proxy|_next/static|_next/image|favicon.ico|refresh).*):path*',], // protect these routes
+  matcher: ["/((?!api|proxy|_next/static|_next/image|favicon.ico|refresh).*)"], // protect these routes
 };
