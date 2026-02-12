@@ -428,10 +428,22 @@ const InnerLoginForm: React.FC = () => {
         </div>
 
         {/* Tiny footer */}
-        <p className="mt-4 text-[10px] leading-relaxed text-slate-400">
-          By continuing, you agree to our{' '}
-          <span className="underline underline-offset-2">Terms</span> and{' '}
-          <span className="underline underline-offset-2">Privacy Policy</span>.
+        <p className="mt-4 text-center text-[10px] leading-relaxed text-slate-400">
+          By signing in, you agree to our{' '}
+          <a
+            href="https://www.scanerio.com/terms"
+            className="underline underline-offset-2"
+          >
+            Terms of Service
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://www.scanerio.com/privacypolicy"
+            className="underline underline-offset-2"
+          >
+            Privacy Policy
+          </a>
+          .
         </p>
       </form>
     </motion.div>
